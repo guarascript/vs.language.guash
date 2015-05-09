@@ -1,0 +1,19 @@
+{
+	"pluginId": "vs.language.guash",
+	"activationEvents": ["textModel:gua"],
+	"mainModule": "./guashMain",
+	"contributes": {
+		"language": [{
+			"id": "gua",
+			"extensions": [ ".guash", ".gua" ],
+			"aliases": [ "Guash", "Gua", "guash", "gua" ]
+		}]
+	},
+	"scripts": {
+		"compile": "node ../../node_modules/gulp/bin/gulp.js --gulpfile ../gulpfile.js compile --dir vs.language.guash"
+	},
+	
+	"_bundling": [
+		{ "name": "./guashMain" }
+	]
+}
